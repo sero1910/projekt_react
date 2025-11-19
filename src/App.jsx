@@ -8,6 +8,7 @@ import AOS from 'aos';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
+
 // Strony
 import About from './pages/About';
 import Interests from './pages/Interests';
@@ -26,6 +27,7 @@ function App() {
   return (
     <Router>
       <Navbar /> 
+     
       
       <Routes>
         <Route path="/" element={<About />} /> 

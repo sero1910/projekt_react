@@ -2,6 +2,8 @@
 
 import React, { useEffect } from 'react';
 import AOS from 'aos';
+// 🛑 KROK 1: IMPORTUJEMY KOMPONENT WIDŻETU
+import WeatherWidget from '../components/WeatherWidget'; 
 
 const Contact = () => {
     useEffect(() => {
@@ -22,6 +24,11 @@ const Contact = () => {
                             <h2 className="mb-4 text-center" data-aos="fade-right">Kontakt</h2>
                             <p className="text-center" data-aos="fade-up">Masz pytanie? Napisz do mnie.</p>
                             
+                            {/* 🛑 KROK 2: OSADZAMY WIDŻET TUTAJ */}
+                            <div className="mb-4" data-aos="fade-up" data-aos-delay="100">
+                                <WeatherWidget />
+                            </div>
+
                             <form onSubmit={handleSubmit} data-aos="fade-up" data-aos-delay="200">
                                 <div className="mb-3">
                                     <label htmlFor="name" className="form-label">Imię</label>

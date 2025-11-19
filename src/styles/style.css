@@ -165,22 +165,3 @@ main {
     padding: 15px 25px 20px 25px;
 }
 
-/* Stylizacja przycisku Zobacz na GitHub */
-.project-btn {
-    /* Pełne dopasowanie do stylu przycisku z formularza Kontakt (jeśli jest primary) */
-    background-color: var(--kolor-akcentu);
-    border-color: var(--kolor-akcentu);
-    color: var(--kolor-tekstu); 
-    font-weight: bold;
-    padding: 8px 18px;
-    border-radius: 8px; 
-    text-transform: none;
-    letter-spacing: normal;
-}
-
-.project-btn:hover {
-    background-color: var(--kolor-akcentu-ciemny);
-    border-color: var(--kolor-akcentu-ciemny);
-    color: var(--kolor-tekstu); /* Lub biały, jeśli lepiej pasuje */
-    transform: none;
-}
