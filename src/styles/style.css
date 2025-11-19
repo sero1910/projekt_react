@@ -1,0 +1,186 @@
+/* --- 1. Importowanie Fontów Google --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lato:wght@400;700&display=swap');
+
+/* --- 2. Główne Zmienne Kolorów (Łatwe do zmiany) --- */
+:root {
+    --kolor-tla: #FFFFFF;
+    --kolor-tla-jasny: #F8F9FA;  /* Jasnoszary z Bootstrapa */
+    --kolor-tekstu: #333;
+    --kolor-akcentu: #A0D2EB;   /* Jasny, miły błękit */
+    --kolor-akcentu-ciemny: #7FB8D6;
+    --font-naglowki: 'Poppins', sans-serif;
+    --font-tekst: 'Lato', sans-serif;
+}
+
+/* --- 3. Globalne Style --- */
+body {
+    font-family: var(--font-tekst);
+    color: var(--kolor-tekstu);
+    background-color: var(--kolor-tla);
+}
+
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: var(--font-naglowki);
+    font-weight: 600; /* Lekko pogrubiony nagłówek */
+    
+}
+
+main {
+    padding-top: 100px;
+    padding-bottom: 50px; 
+}
+
+/* Dostosowanie tła sekcji, jeśli go użyjemy (np. dla kontaktu) */
+.bg-light {
+    background-color: var(--kolor-tla-jasny) !important;
+}
+
+/* --- 5. Dostosowanie Komponentów Bootstrapa --- */
+
+/* Przycisk z naszym kolorem akcentu */
+.btn-primary {
+    background-color: var(--kolor-akcentu);
+    border-color: var(--kolor-akcentu);
+    color: var(--kolor-tekstu);
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: var(--kolor-akcentu-ciemny);
+    border-color: var(--kolor-akcentu-ciemny);
+}
+
+/* Zmiana koloru linków w nawigacji */
+.navbar-light .nav-link {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+}
+
+/* Aktywny link w nawigacji */
+.navbar-light .nav-link.active,
+.navbar-light .nav-link:hover {
+    color: var(--kolor-akcentu-ciemny);
+}
+
+/* Delikatny cień na kartach */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+}
+
+
+#home-hero {
+    /* Ustawiamy wysokość na 70% okna, nie musi być już 100% */
+    min-height: 70vh; 
+    display: flex;
+    align-items: center;
+    padding-top: 0; /* Resetujemy padding z 'main' */
+}
+
+#home-hero h1 {
+    color: var(--kolor-akcentu-ciemny);
+    font-weight: 600;
+}
+/* --- 7. Stylizacja Sekcji Projektów (Dopasowana do Zainteresowań) --- */
+
+/* Główne style sekcji */
+#projekty {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Nagłówek sekcji */
+#projekty h2 {
+    /* Używamy stylów dla nagłówków sekcji (jak w O Mnie/Zainteresowania) */
+    font-family: var(--font-naglowki);
+    font-weight: 600;
+    color: var(--kolor-tekstu); /* Domyślny kolor tekstu, tak jak "Zainteresowania" */
+    
+    /* Usuwamy dodatkowe podkreślenie, aby wyglądało jak "Zainteresowania" */
+    display: block; 
+    text-align: left; /* Nagłówek jest wyrównany do lewej */
+    margin-bottom: 3rem !important;
+}
+
+/* Karta Projektu (Dopasowanie do stylu kart z Zainteresowań) */
+.project-card {
+    /* To jest kluczowe, aby wyglądało jak karta z Zainteresowań */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Lżejszy cień, jak w Zainteresowaniach */
+    border: none; /* Bez obramowania */
+    border-radius: 0; /* Bez zaokrągleń, jak w Zainteresowaniach */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    /* Efekt hover: delikatne podniesienie i lżejszy cień */
+    transform: translateY(-5px); 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important; 
+}
+
+.project-card .card-body {
+    text-align: center; /* Wyśrodkowanie tekstu (jak na stronie Zainteresowania) */
+    padding: 25px 20px 15px 20px;
+}
+
+.project-card .card-title {
+    font-family: var(--font-naglowki);
+    font-weight: 600;
+    color: var(--kolor-tekstu); /* Kolor czarny, pogrubiony jak w kartach */
+    font-size: 1.25rem; /* Standardowy rozmiar nagłówka karty */
+    margin-bottom: 10px;
+}
+
+.project-card .card-text {
+    font-family: var(--font-tekst);
+    color: #666; /* Subtelnie szary opis */
+    font-size: 0.95rem;
+    /* Utrzymanie stałej wysokości dla opisów, by wyrównać karty */
+    min-height: 50px; 
+}
+
+/* Stylizacja tagów technologicznych (badges) */
+.tech-tag {
+    /* Zmiana stylu badge, aby był dyskretny i tekstowy */
+    background-color: transparent !important; /* Przezroczyste tło */
+    color: var(--kolor-akcentu-ciemny) !important; /* Kolor akcentu na tekście */
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    padding: 3px 0px;
+    margin-right: 10px;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px dashed var(--kolor-akcentu); /* Subtelne podkreślenie */
+}
+
+/* Stopka karty z przyciskiem (dla odróżnienia od Zainteresowań) */
+.project-card .card-footer {
+    background-color: var(--kolor-tla); /* Białe tło */
+    border-top: none;
+    padding: 15px 25px 20px 25px;
+}
+
+/* Stylizacja przycisku Zobacz na GitHub */
+.project-btn {
+    /* Pełne dopasowanie do stylu przycisku z formularza Kontakt (jeśli jest primary) */
+    background-color: var(--kolor-akcentu);
+    border-color: var(--kolor-akcentu);
+    color: var(--kolor-tekstu); 
+    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 8px; 
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.project-btn:hover {
+    background-color: var(--kolor-akcentu-ciemny);
+    border-color: var(--kolor-akcentu-ciemny);
+    color: var(--kolor-tekstu); /* Lub biały, jeśli lepiej pasuje */
+    transform: none;
+}
