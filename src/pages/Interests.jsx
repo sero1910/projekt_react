@@ -4,10 +4,10 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 
 const interestsData = [
-    { title: "Gry Planszowe", text: "Logiczne myślenie i strategia." },
-    { title: "Piłka nożna", text: "Sport i rywalizacja." },
-    { title: "Rozwiązywanie krzyżówek", text: "Słownictwo i pamięć." },
-    { title: "Chodzenie po górach", text: "Wytrzymałość fizyczna i kontakt z naturą." },
+    { title: "Gry Planszowe", text: "Logiczne myślenie i strategia" },
+    { title: "Piłka nożna", text: "Sport i rywalizacja" },
+    { title: "Rozwiązywanie krzyżówek", text: "Słownictwo i pamięć" },
+    { title: "Chodzenie po górach", text: "Wytrzymałość fizyczna i kontakt z naturą" },
     { title: "Bieganie", text: "Wytrwałość i dyscyplina" },
 ];
 

@@ -1,0 +1,1 @@
+npm instal -> npm run dev -> local:5173

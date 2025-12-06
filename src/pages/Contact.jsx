@@ -17,7 +17,7 @@ const Contact = () => {
             <section id="kontakt" className="bg-light py-5">
                 <div className="container">
                     
-                    {/* --- CZĘŚĆ 1: NAGŁÓWEK I FORMULARZ (Wyśrodkowane) --- */}
+                    {}
                     <div className="row justify-content-center mb-5">
                         <div className="col-lg-6">
                             <h2 className="mb-4 text-center" data-aos="fade-right">Kontakt</h2>

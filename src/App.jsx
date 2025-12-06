@@ -1,15 +1,10 @@
-// src/App.jsx
-
-import React, { useEffect } from 'react'; // <-- DODAJ JAWNY IMPORT REACT
+import React, { useEffect } from 'react'; 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AOS from 'aos';
 
-// Layout
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-
-// Strony
 import About from './pages/About';
 import Interests from './pages/Interests';
 import Projects from './pages/Projects';
@@ -27,8 +22,7 @@ function App() {
   return (
     <Router>
       <Navbar /> 
-     
-      
+
       <Routes>
         <Route path="/" element={<About />} /> 
         <Route path="/projekty" element={<Projects />} />

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-// Twój klucz API
+
 const API_KEY = '0cb13b4cee97b40b0e6346cdc45ac4a0'; 
-const CITY = 'Lublin'; // Upewnij się, że tu jest Lublin
+const CITY = 'Lublin'; 
 
 const WeatherWidget = () => {
     const [weather, setWeather] = useState(null);
@@ -34,11 +34,7 @@ const WeatherWidget = () => {
         fetchWeather();
     }, []);
 
-    // --- RENDEROWANIE ---
-
-    // Klasy dla kontenera, żeby był równy i ładny:
-    // h-100 -> rozciągnij na pełną wysokość rodzica
-    // d-flex flex-column justify-content-center -> wyśrodkuj zawartość
+  
     const containerClasses = "weather-container p-4 bg-light rounded shadow-sm h-100 d-flex flex-column justify-content-center align-items-center";
 
     if (loading) {
@@ -54,7 +50,7 @@ const WeatherWidget = () => {
     const temp = Math.round(weather.main.temp);
     const description = weather.weather[0].description;
     const iconCode = weather.weather[0].icon;
-    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`; // @2x dla lepszej jakości
+    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`; 
     
     return (
         <div className={containerClasses}>
